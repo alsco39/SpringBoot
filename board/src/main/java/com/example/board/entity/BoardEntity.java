@@ -24,11 +24,11 @@ public class BoardEntity {
     private Long id;
 
     @NotNull
-    @Column(length = 30, columnDefinition = "VARCHAR(30)")
+    @Column(columnDefinition = "VARCHAR(30)")
     private String title;
 
     @NotNull
-    @Column(length = 100, columnDefinition = "VARCHAR(100)")
+    @Column(columnDefinition = "VARCHAR(100)")
     private String content;
 
 }
