@@ -26,27 +26,6 @@ repositories {
 }
 
 dependencies {
-    //jpa
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    
-    //validation
-    implementation("org.springframework.boot:spring-boot-starter-validation")
-
-    //stater
-    implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-    implementation("org.jetbrains.kotlin:kotlin-reflect")
-
-    //lombok
-    compileOnly("org.projectlombok:lombok")
-    annotationProcessor("org.projectlombok:lombok")
-
-    //database
-    runtimeOnly("com.h2database:h2")
-    runtimeOnly("com.mysql:mysql-connector-j")
-
-    //test
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
 tasks.withType<KotlinCompile> {
