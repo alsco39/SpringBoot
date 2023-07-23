@@ -1,11 +1,11 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.springframework.boot") version "3.1.1"
-    id("io.spring.dependency-management") version "1.1.0"
-    kotlin("jvm") version "1.8.22"
-    kotlin("plugin.spring") version "1.8.22"
-    kotlin("plugin.jpa") version "1.8.22"
+    id("org.springframework.boot") version PluginVersions.SPRING_VERSION
+    id("io.spring.dependency-management") version PluginVersions.DEPENDENCY_MANAGEMENT
+    kotlin("jvm") version PluginVersions.JVM
+    kotlin("plugin.spring") version PluginVersions.SPRING_PLUGIN
+    kotlin("plugin.jpa") version PluginVersions.JPA_PLUGIN
 }
 
 group = "com.example"
@@ -26,6 +26,15 @@ repositories {
 }
 
 dependencies {
+    implementation(Dependencies.JACKSON)
+    implementation(Dependencies.VALIDATION)
+    implementation(Dependencies.WEB)
+    implementation(Dependencies.SECURITY)
+    implementation(Dependencies.JPA)
+    implementation(Dependencies.QUERYDSL)
+    implementation(Dependencies.QUERYDSL_PROCESSOR)
+    runtimeOnly(Dependencies.MYSQL)
+    implementation(Dependencies.REDIS)
 }
 
 tasks.withType<KotlinCompile> {
@@ -38,3 +47,17 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+
+allOpen {
+    annotation("javax.persistence.Entity")
+    annotation("javax.persistence.MappedSuperclass")
+    annotation("javax.persistence.Embeddable")
+}
+
+noArg {
+    annotation("javax.persistence.Entity")
+    annotation("javax.persistence.MappedSuperclass")
+    annotation("javax.persistence.Embeddable")
+    annotation("com.pickdsm.pickserverspring.global.annotation.NoArg")
+}
+

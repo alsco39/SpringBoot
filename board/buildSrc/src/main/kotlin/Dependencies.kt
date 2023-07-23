@@ -1,4 +1,8 @@
 object Dependencies {
+    // kotlin
+    const val KOTLIN_REFLECT = "org.jetbrains.kotlin:kotlin-reflect"
+    const val KOTLIN_STDLIB = "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    const val JACKSON = "com.fasterxml.jackson.module:jackson-module-kotlin"
 
     //validation
     const val VALIDATION = "org.springframework.boot:spring-boot-starter-validation"
@@ -18,4 +22,5 @@ object Dependencies {
 
     // database
     const val MYSQL = "mysql:mysql-connector-java"
+    const val REDIS = "org.springframework.boot:spring-boot-starter-data-redis:${DependencyVersions.REDIS}"
 }
