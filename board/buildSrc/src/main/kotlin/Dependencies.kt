@@ -23,4 +23,10 @@ object Dependencies {
     // database
     const val MYSQL = "mysql:mysql-connector-java"
     const val REDIS = "org.springframework.boot:spring-boot-starter-data-redis:${DependencyVersions.REDIS}"
+
+    //webflux
+    const val WEBFLUX = "org.springframework.boot:spring-boot-starter-webflux"
+
+    // configuration processor
+    const val CONFIGURATION_PROCESSOR = "org.springframework.boot:spring-boot-configuration-processor"
 }

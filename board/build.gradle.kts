@@ -35,6 +35,8 @@ dependencies {
     implementation(Dependencies.QUERYDSL_PROCESSOR)
     runtimeOnly(Dependencies.MYSQL)
     implementation(Dependencies.REDIS)
+    implementation(Dependencies.CONFIGURATION_PROCESSOR)
+    implementation(Dependencies.WEBFLUX)
 }
 
 tasks.withType<KotlinCompile> {
